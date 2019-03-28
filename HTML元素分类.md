@@ -33,3 +33,129 @@ inline元素的特点：
 高度，行高以及顶、底边距不可改变；
 
 宽度就是它所容纳的文字或图片的宽度，不可改变。
+
+
+
+### 几种居中内联元素和块元素的方法
+
+#### 一. 内联元素居中（文本text、图片img、按钮button等） 
+
+给父元素设置text-align:center。 
+
+给一个例子：使若干个元素（数量可变），在一行中居中显示，可用列表实现。我们知道列表中的\<li\>标签元素为块级元素，故可先将其display:inline，在一行中显示，然后将\<li\>的父元素，\<ul\>水平居中显示即可，代码如下：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>test</title> 
+ <style type="text/css">
+    li{display: inline;}
+    ul{text-align: center;}
+ </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>
+```
+
+> **注意：**前提是子元素（即例子中的\<li\>）没有被设置浮动。
+
+#### 二. 块级元素居中 
+
+①定宽块级元素居中 
+margin:0 auto; 
+②不定宽块级元素居中 
+总共有三种方法可解： 
+Ⅰ.利用display:inline使块级元素内联显示； 
+Ⅱ.利用\<table\>长度自适应的特性； 
+Ⅲ.结合父元素，设置浮动和定位。 
+方法Ⅰ详见以上 内联元素水平浮动 。 
+方法Ⅱ：\<table\>是个盛放其他元素的块级容器，其宽度不默认父元素的宽，而是随其中文本长度决定，因此可看作一个定宽块级元素。 
+给需要水平浮动的元素设定display:table或放入\<table\>标签中，即可使用margin:0 auto像定宽块级元素一样居中显示了。代码如下： 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+
+ <style type="text/css">
+ table{margin: 0 auto;}
+ </style>
+</head>
+<body>
+<table>
+<tr>
+<td>
+<p>这是一个不定宽的块级元素,增删其中文字后仍然居中</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
+```
+
+display:table;
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+ <style type="text/css">
+ p{display: table;margin: 0 auto;}
+ </style>
+</head>
+<body>
+<p>这是一个不定宽的块级元素,增删其中文字后仍然居中</p>
+
+</body>
+</html>
+```
+
+方法Ⅲ：利用相对定位，使父元素相对于body向右偏移50%，再使需要居中的元素相对于父元素向左偏移50%，为了防止高度塌陷**设置浮动前一定要给父元素清除浮动**。为了更直观的看到两div位置，给父元素加了黑色边框，子元素加了红色边框，代码如下：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+
+ <style type="text/css">
+ #father{
+    position: relative;
+    clear:both;
+    float: left;
+    left: 50%;
+    border: 1px solid black;
+ }
+ #child{
+    position: relative;
+    float: left;
+    left: -50%;
+    border: 1px solid red;
+ }
+ </style>
+</head>
+<body>
+<div id="father">
+    <div id="child">
+        这是一个不定宽的块级元素,增删其中文字后仍然居中
+    </div>
+</div>
+</body>
+</html>
+```
+
+> 父元素position:absolute，子元素保持相对定位也可以实现水平居中， 
+> 因为绝对定位使父元素脱离了文档流
+
+
+

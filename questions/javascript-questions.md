@@ -1,5 +1,10 @@
 ## JS 问题
 
+- ServiceWorker
+- 同步渲染
+
+
+
 本章节是[前端开发者面试问题 - JS 部分](https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/questions/javascript-questions.md)的参考答案。 欢迎提出 PR 进行建议和指正！
 
 * [请解释事件委托（event delegation）。](#请解释事件委托event-delegation)

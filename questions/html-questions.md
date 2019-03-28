@@ -1,5 +1,10 @@
 # HTML 问题
 
+- 强缓存 相对缓存
+- session cookie
+
+
+
 本章节是[前端开发者面试问题 - HTML 部分](https://github.com/h5bp/Front-end-Developer-Interview-Questions#html-questions)的参考答案。 欢迎提出 PR 进行建议和指正！
 
 * [`DOCTYPE`有什么用？](#doctype有什么用)
