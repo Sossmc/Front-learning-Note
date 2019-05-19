@@ -240,3 +240,11 @@ window.open('url', '_blank')   //默认
 <a href='url' target='_self'></a> //默认
 ```
 
+
+
+### CSS overflow属性
+
+参数是scroll时候，必会出现滚动条。
+参数是auto时候，子元素内容大于父元素时出现滚动条。
+参数是visible时候，溢出的内容出现在父元素之外。
+参数是hidden时候，溢出隐藏。
