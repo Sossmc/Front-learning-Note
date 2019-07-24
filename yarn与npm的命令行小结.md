@@ -92,7 +92,7 @@ update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事
 
 ​     Emojis
 
-​     [速度](https://yarnpkg.com/en/compare)
+​     速度
 
 ​     通过 yarn lockfile 自动实现 shrinkwrap 功能
 

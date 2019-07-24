@@ -2,13 +2,11 @@
 
 　　在了解原型链之前，首先先了解一下创建对象的几种方式，介绍以下三种。
 
-![img](https://images2017.cnblogs.com/blog/1265396/201711/1265396-20171120085805899-2091686630.png)
+![img](assets/1265396-20171120085805899-2091686630.png)
 
 代码：
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
-```
+```js
 <script type="text/javascript">
     // 第一种方式：字面量
     var o1 = {name: 'o1'}
@@ -27,13 +25,11 @@
 </script>
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
  
 
 打印结果：
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127082455972-1605397877.png)
+![img](assets/1265396-20171127082455972-1605397877.png)
 
 对象是创建出来了，但你可能对结果很诧异，为什么不同呢？别急，慢慢来。
 
@@ -41,13 +37,13 @@
 
 先来一张容易让人懵逼的图
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127082821065-1506469155.png)
+![img](assets/1265396-20171127082821065-1506469155.png)
 
 **什么是原型对象？实例？构造函数？**
 
 概念就不多说了，看代码吧
 
-```
+```js
 var M = function (name) { this.name = name; }
 var o3 = new M('o3')
 ```
@@ -62,7 +58,7 @@ var o3 = new M('o3')
 
 再来通过下面这个图来理解一下 
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127085304050-907668544.png)
+![img](assets/1265396-20171127085304050-907668544.png)
 
  
 
@@ -78,9 +74,7 @@ var o3 = new M('o3')
 
 接着上面的例子继续演示：
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
-```
+```js
 var M = function (name) { this.name = name; }
 var o3 = new M('o3')
 var o5 = new M()
@@ -92,13 +86,9 @@ o3.say()
 o5.say()
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
- 
-
 打印结果
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127091228190-1284920197.png)
+![img](assets/1265396-20171127091228190-1284920197.png)
 
 按照JS引擎的分析方式，在访问一个实例的属性的时候，现在实例本身中找，如果没找到就去它的原型中找，还没找到就再往上找，直到找到。这就是原型链。
 
@@ -110,11 +100,11 @@ o5.say()
 
 也就是说普通函数是Function这个构造函数的一个实例。
 
- ![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127092040019-692484066.png)
+ ![img](assets/1265396-20171127092040019-692484066.png)
 
 ### instanceof原理
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171127092153300-1935600767.png)
+![img](assets/1265396-20171127092153300-1935600767.png)
 
 instanceof是判断实例对象的__proto__和生成该实例的构造函数的prototype是不是引用的同一个地址。
 
@@ -124,13 +114,13 @@ instanceof是判断实例对象的__proto__和生成该实例的构造函数的p
 
  继续上面的代码
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171128083930940-1553013565.png)
+![img](assets/1265396-20171128083930940-1553013565.png)
 
 那怎么判断实例是由哪个构造函数生成的呢？这时候就要用到constructor了。
 
 实例的原型的构造函数， obj.__proto__.constructor
 
-![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171128084439612-726400677.png)
+![img](assets/1265396-20171128084439612-726400677.png)
 
  
 
@@ -145,9 +135,7 @@ new运算符的原理
 
  下面根据new的工作原理通过代码手动实现一下new运算符
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
-```
+```js
 var new2 = function (func) {
     var o = Object.create(func.prototype); 　　 //创建对象
     var k = func.call(o);　　　　　　　　　　　　　//改变this指向，把结果付给k
@@ -159,13 +147,9 @@ var new2 = function (func) {
 }    
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
- 
-
  验证
 
- ![img](https://images2018.cnblogs.com/blog/1265396/201711/1265396-20171128090739003-1451557331.png)
+ ![img](assets/1265396-20171128090739003-1451557331.png)
 
 经过上图一系列折腾，不难看出，我们手动编写的new2和new运算符的作用是一样的。
 
