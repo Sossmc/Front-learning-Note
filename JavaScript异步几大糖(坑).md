@@ -1,10 +1,12 @@
 JavaScript是单线程语言，编程过程中总是要面临大量的异步变成需求，对于初入门的瓜皮来说，总是会面临各种神奇的情景，阅读源码时候也难免遇见各式样的写法和逻辑，以下总结目前已有的几种JavaScript异步编程写法：
 
-	- 回调函数
+- 回调函数
 - 事件监听
 - 发布/订阅
 - Promise对象
-	- async/await
+  - .then .catch
+  - co  yield/generator
+  - async/await
 
 
 
