@@ -296,3 +296,20 @@ doIt();
 
 （3）**更广的适用性**
  yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以跟 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。
+
+setTimeOut(fn,3000)
+
+
+
+```js
+import fn from 'disanfang';
+function shouQuan(){
+  request()
+  return 'dsfadfasdf'
+}
+
+ssoid = await shouQuan()
+//fn(shouQuan)
+
+```
+
