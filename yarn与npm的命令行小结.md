@@ -24,14 +24,12 @@
 
 5、使用 npm i 安装package.json里的依赖时，两部分的包都会pull下来
 
-     5-1、使用 --prod、
-          npm i --prod <=> npm i --production  // 仅会拉取dependencies中的依赖
-    
+     5-1、使用 --prod、npm i --prod <=> npm i --production  // 仅会拉取dependencies中的依赖
      5-2、设置NODE_DEV=production时            // 效果同上，仅会拉取dependencies中的依赖 (注意等号两边没空格)
-          5-2-1、命令行设置（注意不同环境时的"分割符"）
-               window => cmd ：set NODE_ENV=production && xxxx
-               mac      => shell  : NODE_ENV=production 空格 xxxx
-          5-2-2、package.json=>script命令中设置
+      5-2-1、命令行设置（注意不同环境时的"分割符"）
+        window => cmd ：set NODE_ENV=production && xxxx
+        mac      => shell  : NODE_ENV=production 空格 xxxx
+      5-2-2、package.json=>script命令中设置
 
 
 彩蛋：在新建package.json文件时，我们可以使用npm init -y 快速创建（yes 表示一路默认创建，还有 -f 表示 force）
@@ -92,7 +90,7 @@ update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事
 
 ​     Emojis
 
-​     [速度](https://yarnpkg.com/en/compare)
+​     速度
 
 ​     通过 yarn lockfile 自动实现 shrinkwrap 功能
 

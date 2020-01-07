@@ -1,6 +1,4 @@
-# [浅谈CSS3中display属性的Flex布局](https://www.cnblogs.com/xuyuntao/articles/6391728.html)
-
-
+# 浅谈CSS3中display属性的Flex布局
 
 最近在学习微信小程序，在设计首页布局的时候，新认识了一种布局方式display:flex
 
@@ -113,31 +111,31 @@ space-around：每个项目两侧的间隔相等。所以，项目之间的间�
 
 ### order
 
-```
-1     .item {
-2       order: <integer>;
-3     }
+```css
+.item {
+  order: <integer>;
+}
 ```
 
 ### flex-grow
 
-```
-1     .item {
-2       flex-grow: <number>; /* default 0 */
-3     }
+```css
+.item {
+	flex-grow: <number>; /* default 0 */
+}
 ```
 
 ### flex-shrink
 
-```
-1     .item {
-2       flex-shrink: <number>; /* default 1 */
-3     }
+```css
+.item {
+	flex-shrink: <number>; /* default 1 */
+}
 ```
 
 ### flex-basis
 
-```
+```css
 1     .item {
 2       flex-basis: <length> | auto; /* default auto */
 3     }
@@ -145,18 +143,18 @@ space-around：每个项目两侧的间隔相等。所以，项目之间的间�
 
 ### flex
 
-```
-1     .item {
-2       flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
-3     }
+```css
+.item {
+	flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
 ```
 
 ### align-self
 
-```
-1     .item {
-2       align-self: auto | flex-start | flex-end | center | baseline | stretch;
-3     }
+```css
+.item {
+	align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
 ```
 
  

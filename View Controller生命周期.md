@@ -1,6 +1,6 @@
 `UIViewController`类（及其子类） 的对象带有一组管理其视图层次结构的方法。当视图控制器在状态之间转换时，iOS会在适当的时候自动调用这些方法。当您创建视图控制器[子类](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW14)（就像`ViewController`您一直在使用的类）时，它[继承](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW45)了在其中定义的方法，`UIViewController`并允许您为每个方法添加自己的自定义行为。了解系统何时调用这些方法非常重要，这样您就可以在过程中的相应步骤中设置或拆除您正在显示的视图 - 这些都是您在课程后面需要做的事情。
 
-![图片：../ Art / WWVC_vclife_2x.png](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/WWVC_vclife_2x.png)
+![WWVC_vclife_2x.png](assets/WWVC_vclife_2x.png)
 
 iOS调用`UIViewController`方法如下：
 

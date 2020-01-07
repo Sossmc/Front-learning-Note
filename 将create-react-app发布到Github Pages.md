@@ -14,7 +14,7 @@
 
 添加 homepage和`script`部署脚本部分
 
-![image-20190216210346891](将create-react-app发布到Github Pages.assets/image-20190216210346891.png)
+![image-20190216210346891](assets/image-20190216210346891.png)
 
 > script运行顺序 preXXX > XXX > postXXX
 >
