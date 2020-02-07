@@ -1,6 +1,8 @@
+RequireJS实现了AMD的API.
+
+CommonJS是使用exports对象来定义模块的一种方法，它定义了模块的内容。
+
 # CommonJS规范
-
-
 
 1、CommonJs规范的出发点：JS没有模块系统、标准库较少、缺乏包管理工具；为了让JS可以在任何地方运行，以达到Java、C#、PHP这些后台语言具备开发大型应用的能力；
 
