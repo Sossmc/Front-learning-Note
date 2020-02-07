@@ -39,7 +39,7 @@
 
 - [重新开始学css](./css/重新开始学css.md)
 - [色彩理论](./css/色彩理论.md)
-- [CSS BEM规范](./css/CSS BEM规范.md)
+- [CSS BEM规范](./css/CSS-BEM规范.md)
 - [CSS选择器](./css/CSS选择器.md)
 - [CSS函数](./css/CSS函数.md)
 - [clearfix(清除浮动)](./css/clearfix(清除浮动).md)
