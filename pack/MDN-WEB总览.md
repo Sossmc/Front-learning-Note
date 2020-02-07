@@ -1,4 +1,4 @@
-## Web 技术 [[i]](https://developer.mozilla.org/zh-CN/docs/Web#Web_技术)
+## Web 技术总览 [[i]](https://developer.mozilla.org/zh-CN/docs/Web#Web_技术)
 
 ### 基础 [[i]](https://developer.mozilla.org/zh-CN/docs/Web#基础)
 
